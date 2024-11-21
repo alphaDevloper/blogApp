@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-btn";
-import LoadingBar from "react-top-loading-bar";
-import { usePathname } from "next/navigation";
+// import LoadingBar from "react-top-loading-bar";
+// import { usePathname } from "next/navigation";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,32 +12,32 @@ export default function Home() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const [progress, setProgress] = useState(0);
-  const pathname = usePathname();
+  // const [progress, setProgress] = useState(0);
+  // const pathname = usePathname();
 
-  useEffect(() => {
-    setProgress(30);
-    setTimeout(() => {
-      setProgress(70);
-    }, 100);
-    setTimeout(() => {
-      setProgress(100);
-    }, 400);
-  }, [pathname]);
+  // useEffect(() => {
+  //   setProgress(30);
+  //   setTimeout(() => {
+  //     setProgress(70);
+  //   }, 100);
+  //   setTimeout(() => {
+  //     setProgress(100);
+  //   }, 400);
+  // }, [pathname]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setProgress(0);
-    }, 500);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setProgress(0);
+  //   }, 500);
+  // });
 
   return (
     <nav className="bg-background/50 shadow-lg sticky top-0 backdrop-blur-sm z-10">
-      <LoadingBar
+      {/* <LoadingBar
         color="#4d50e2"
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
-      />
+      /> */}
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
